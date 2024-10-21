@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Recruitment Website</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <form action="post_job.php" method="POST">
+        <label>Job Title:</label>
+        <input type="text" name="job_title" required><br>
+        
+        <label>Job Description:</label>
+        <textarea name="job_desc"></textarea><br>
+    
+        <label>Location:</label>
+        <input type="text" name="location" required><br>
+    
+        <label>Experience:</label>
+        <input type="number" name="experience" required><br>
+    
+        <input type="submit" value="Post Job">
+    </form>
+    
+    <input type="text" id="keyword" onkeyup="searchJobs()">
+    <div id="results"></div>
+
+    <script src="file.js"></script>
+</body>
+</html>
