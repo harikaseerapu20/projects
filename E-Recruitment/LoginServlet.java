@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        String password = request.getParameter("password"); // Use a better hashing method in production
+        String password = request.getParameter("password"); 
         
         try (Connection conn = DatabaseConnection.getConnection()) {
             String query = "SELECT * FROM users WHERE username=? AND password=MD5(?)";
