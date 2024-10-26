@@ -9,7 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.mindrot.jbcrypt.BCrypt; // Make sure to include the BCrypt library
+import org.mindrot.jbcrypt.BCrypt; 
 
 @WebServlet("/register")
 public class RegistrationServlet extends HttpServlet {
@@ -21,9 +21,9 @@ public class RegistrationServlet extends HttpServlet {
         String password = request.getParameter("password");
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt()); // Secure password hash
 
-        String jdbcURL = "jdbc:mysql://localhost:3306/your_database"; // Update with your database URL
-        String dbUser  = "your_username"; // Update with your database username
-        String dbPassword = "your_password"; // Update with your database password
+        String jdbcURL = "jdbc:mysql://localhost:3306/your_database"; 
+        String dbUser  = "your_username"; 
+        String dbPassword = "your_password"; 
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
